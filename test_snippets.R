@@ -65,3 +65,14 @@ df_test %>% count(fixed_radius, cycling_radius)
 
 single <- tar_read(single_plot)
 str(single, 1)     # note: this is a list
+
+comb <- tar_read(combined_plot)
+comb
+
+# Check just branches:
+tar_read(points, branches = 1)
+tar_read(points, branches = 2)
+tar_read(single_plot, branches = 1)
+tar_read(single_plot, branches = 2)
+
+

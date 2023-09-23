@@ -8,6 +8,8 @@ spirograph_points <- function(fixed_radius, cycling_radius) {
   x <- diff * cos(t) + cos(t * ratio)
   y <- diff * sin(t) - sin(t * ratio)
   tibble(x = x, y = y, fixed_radius = fixed_radius, cycling_radius = cycling_radius)
+  # Note that 'fixed_radius' and 'cycling_radius' areincluded
+  # From manual: " It is good practice to proactively append this metadata to each branch"
 }
 
 plot_spirographs <- function(points) {
